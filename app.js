@@ -398,17 +398,17 @@ function checkIfValid (target) {
 function checkForWin () {
     const kings = Array.from(document.querySelectorAll('#king'));
     if (!kings.some(king => king.classList.contains('white'))) {
-        infoDisplay.innerHTML = 'black Player wins'
-        const allSquares = document.querySelectorAll('.square')
-        allSquares.forEach(square => square.firstChild?.setAttribute('draggable', false))
+        infoDisplay.innerHTML = 'black Player wins';
+        const allSquares = document.querySelectorAll('.square');
+        allSquares.forEach(square => square.firstChild?.setAttribute('draggable', false));
 
         var audio = new Audio('sounds/notify.mp3');
         audio.play();
     }
     if (!kings.some(king => king.classList.contains('black'))) {
-        infoDisplay.innerHTML = 'White Player wins'
-        const allSquares = document.querySelectorAll('.square')
-        allSquares.forEach(square => square.firstChild?.setAttribute('draggable', false))
+        infoDisplay.innerHTML = 'White Player wins';
+        const allSquares = document.querySelectorAll('.square');
+        allSquares.forEach(square => square.firstChild?.setAttribute('draggable', false));
 
         var audio = new Audio('sounds/notify.mp3');
         audio.play();
