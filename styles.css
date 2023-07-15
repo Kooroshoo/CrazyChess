@@ -1,0 +1,87 @@
+html {
+    background-color: rgb(49, 46, 43);
+}
+
+#gameboard {
+    width: 800px;
+    height: 800px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+
+    position: relative;
+    z-index: 0;
+    
+}
+
+.piece {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+
+    position: relative;
+    z-index: 1;
+    
+}
+
+.green-square {
+    background-color: rgb(118, 150, 86);
+}
+
+.white-square {
+    background-color: rgb(238, 238, 210);
+}
+
+.wk {
+    background-image: url("images/wk.png");
+}
+
+.bk {
+    background-image: url("images/bk.png");
+}
+
+.wq {
+    background-image: url("images/wq.png");
+}
+
+.bq {
+    background-image: url("images/bq.png");
+}
+
+.wr {
+    background-image: url("images/wr.png");
+}
+
+.br {
+    background-image: url("images/br.png");
+}
+
+.wn {
+    background-image: url("images/wn.png");
+}
+
+.bn {
+    background-image: url("images/bn.png");
+}
+
+.wb {
+    background-image: url("images/wb.png");
+}
+
+.bb {
+    background-image: url("images/bb.png");
+}
+
+.wp {
+    background-image: url("images/wp.png");
+}
+
+.bp {
+    background-image: url("images/bp.png");
+}
