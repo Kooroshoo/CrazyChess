@@ -11,6 +11,16 @@ html {
 
 }
 
+
+
+p {
+    color: white;
+}
+
+#info-display {
+    color: white;
+}
+
 .square {
     width: 100px;
     height: 100px;

@@ -139,24 +139,30 @@ function dragDrop (e) {
 
     if (correctGo ) {
         if (takenByOponent && valid) {
-            console.log("A")
             e.target.parentNode.append(draggedElement)
             e.target.remove();
             checkForWin ()
             changePlayer();
+
+            var audio = new Audio('sounds/capture.mp3');
+            audio.play();
+
             return
         }
         if (taken && !takenByOponent) {
-            console.log("B")
             infoDisplay.textContent = "you cannot go here"
             setTimeout(() => { infoDisplay.textContent = ''}, 2000);
             return;
         }
         if (valid) {
-            console.log("C")
             e.target.append(draggedElement);
             checkForWin ()
             changePlayer();
+
+            
+            var audio = new Audio('sounds/move-self.mp3');
+            audio.play();
+
             return;
         }
         else {
@@ -395,10 +401,16 @@ function checkForWin () {
         infoDisplay.innerHTML = 'black Player wins'
         const allSquares = document.querySelectorAll('.square')
         allSquares.forEach(square => square.firstChild?.setAttribute('draggable', false))
+
+        var audio = new Audio('sounds/notify.mp3');
+        audio.play();
     }
     if (!kings.some(king => king.classList.contains('black'))) {
         infoDisplay.innerHTML = 'White Player wins'
         const allSquares = document.querySelectorAll('.square')
         allSquares.forEach(square => square.firstChild?.setAttribute('draggable', false))
+
+        var audio = new Audio('sounds/notify.mp3');
+        audio.play();
     }
 }
