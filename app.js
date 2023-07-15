@@ -137,7 +137,7 @@ function dragDrop (e) {
     const oponentGo = playerGo === 'white'? 'black' : 'white';
     const takenByOponent = e.target?.classList.contains(oponentGo);
 
-    if (correctGo ) {
+    if (correctGo && draggedElement.draggable === true) {
         if (takenByOponent && valid) {
             e.target.parentNode.append(draggedElement)
             e.target.remove();
