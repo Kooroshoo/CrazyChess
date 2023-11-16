@@ -9,9 +9,30 @@ html {
     display: flex;
     flex-wrap: wrap;
 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
+a {
+    color: rgba(118, 150, 56);
+}
 
+.author {
+    position: absolute;
+    bottom: 5%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat';
+    font-size: 1em;
+    text-transform: uppercase;
+    width: auto;
+    line-height: 1.2em;
+    color: white;
+    padding: .2em;
+}
 
 p {
     color: white;
